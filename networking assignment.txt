@@ -1,0 +1,401 @@
+1. What is the role of networking in DevOps?
+ans: Network in DevOps refers to the acceptance of DevOps culture and principles in network engineering and operations.for network automation including "network as API" concepts, along with continuous development, integration and deployment of new networking technologies.
+-->Automation can help address the following requirements:
+a)Speed of deployment: Automation allows for quick network configuration during the application development and test phases.
+b)Stability of infrastructure: Automation allows developers to create tests and achieve stability of infrastructure with every application update and throughout application operation
+c)Consistent processes
+d)Continuous integration
+e)Continuous delivery
+f)Continous monotiring and maintaince
+
+2. What are some common networking protocols used in DevOps?
+ans: Transmission Control Protocol (TCP)
+Internet Protocol (IP)
+User Datagram Protocol (UDP)
+Post office Protocol (POP)
+Simple mail transport Protocol (SMTP)
+File Transfer Protocol (FTP)
+Hyper Text Transfer Protocol (HTTP)
+Hyper Text Transfer Protocol Secure (HTTPS)
+Telnet
+
+3) What is load balancing, and how does it help in DevOps?
+ans:suppose a millons of users are connected to the server trying to access the information,thus the traffice is very high. in such case case load balancer is used to equally distribute the traffic in all the resources.
+
+4) What is container networking, and how is it used in DevOps?
+ans: A container network is a form of virtualization similar to virtual machines (VM) in concept but with distinguishing differences. Primarily, the container method is a form of operating system virtualization as compared to VMs, which are a form of hardware virtualization.
+Essentially, docker networking is used to create communication between the docker containers and the outside world via host machine
+
+5) What is Infrastructure as Code (IaC), and how does it relate to networking in DevOps?
+ans: Infrastructure as Code (IaC) is the managing and provisioning of infrastructure through code instead of through manual processes.
+     IaC for networking involves similar methods to create and maintain the physical (underlay) and virtual (overlay) networks. A network configuration repository, like Git, houses the configuration templates and variables.
+     Automation tools are triggered when the repository changes.
+     The resulting automations check out the new configuration definitions, perform variable replacement and deploy the updated configurations.
+
+6) What is the OSI model and how does it relate to networking?
+ans: OSI model is defined as open system interconnection, which is the blueprint model of how data flows throughout the network system. the entire network system is basically built on referring OSI model which is of 7 layers,they are:
+application layer
+presentation layer
+secession layer 
+transport layer
+network layer
+datalink layer
+physical layer
+
+
+7) Explain the difference between TCP and UDP?
+ans: TCP:
+--> TCP stands for transfer control protocol 
+-->tcp is connection orriented, which means we will have the information weather the data is recived or not
+-->it provides error checking mechanism
+--> transmission of data is slower
+--> broadcasting is not supported by the tcp
+
+UDP: 
+--> UDP stands for user datagram protocol
+--> udp is connection less oriented, which means we will no longer have the information related to data after being sent by the sender
+--> it does not provide error checking mechanism
+--> transmission of data is faster
+--> broadcasting is supported by udp
+
+8)    What is a subnet mask and how is it used?
+ans: internet protocol has 2 sections network and host section, a subnet mask address can be crearted bt the remaning host address.
+basically subnet mask consist of 32 bit number which is craeted using making network id to 1's and host id to 0's  
+In this way, the subnet mask separates the IP address into the network and host addresses.
+The network mask is used when a network is not subnetted. When we divide a network to several subnetworks, we need
+to create a subnetwork mask (or subnet mask) for each subnetwork.
+
+9) What is a VLAN and how is it used in networking?
+ans: A virtual local area network (VLAN) is a virtualized connection that connects multiple devices and network nodes from different LANs into one logical network.VLANs provide a number of advantages including ease of administration, confinement of broadcast domains, reduced network traffic, and enforcement of security policies. 
+
+10)  Explain the difference between a hub, a switch, and a router?
+ans: HUB:
+            1)Hub is a physical layer device - layer 1.
+            2)A Hub works on the basis of broadcasting.
+            3)At least single network is required to connect.
+            4)Speed of original hub 10Mbps and modern internet hub is 100Mbps.
+    switch:
+            1)Switch is a data link layer device i.e. layer 2. 
+            2)Switch works on the basis of MAC address.
+            3)At least single network is required to connect.
+            4)maximum speed is 10Mbps to 100Mbps.
+
+
+    Router: 
+            1) Router is a network layer device i.e. layer 3.  
+            2)A router works on the basis of IP address.
+            3)Router needs at least two networks to connect. 
+            4)maximum speed for wireless is 1-10 Mbps and maximum speed for wired connections is 100 Mbps.
+
+
+
+11  How do you troubleshoot network connectivity issues?
+ans:Basic steps are:
+        1. Identify the Problem
+        2.Develop a Theory
+        3. Test the Theory
+        4. Plan of Action
+        5. Implement the Solution
+        6. Verify System Functionality
+    We can use Command-Line Tools :
+    1.ping - If the network is functioning properly, the receiving host returns the datagram.
+    2.tracert/traceroute-  to determine where you are losing packets in the network, helping to identify problems.
+    3.nslookup - A DNS utility that displays the IP address of a hostname or vice versa. This tool is useful for identifying problems involving DNS name resolution.
+    4.ipconfig  - A Windows TCP/IP utility that verifies network settings and connections.
+    5.netstat — A utility that shows the status of each active network connection.
+    6.route — A command that enables manual updating of the routing table. It can be used to troubleshoot static routing problems in a network.
+    7.dig — A Linux or UNIX command-line tool that will display name server information. It can be used to troubleshoot problems in DNS name resolution.
+
+12) 12  What is DNS and how does it work?
+ans: -->DNS stands for Domain Name System.
+-->DNS is a directory service that provides a mapping between the name of a host on the network and its numerical address.
+-->DNS is required for the functioning of the internet.
+-->Each node in a tree has a domain name, and a full domain name is a sequence of symbols specified by dots.
+-->DNS is a service that translates the domain name into IP addresses. This allows the users of networks to utilize user-friendly names when looking for -->other hosts instead of remembering the IP addresses.
+
+13)  What is a firewall and what types of firewall exist?
+ans: A firewall is a type of cybersecurity tool used to filter traffic on a network. 
+     Firewalls can separate network nodes from external traffic sources, internal traffic sources, or even specific applications.
+     Firewall Types:
+        Packet-filtering firewalls
+        Circuit-level gateways
+        Stateful inspection firewalls
+        Application-level gateways (a.k.a. proxy firewalls)
+        Next-gen firewalls
+
+
+14)  Explain the difference between IPv4 and IPv6?
+ans: IPv4:--
+            1.In the case of IPv4, it has 5 types of classes, Class A, Class B, Class C, Class D, and Class E.
+            2.IPv4 is composed of 32-bit address length and is the fourth version of the Internet Protocol (IP).
+            3.Requires manual and DHCP configuration for communication with the network.
+            4.IPv4 consists of approximately 4 billion addresses.
+            5.In the case of IPv4 addressing no encryption or authentication services are initiated.
+            6.Broadcasting.
+            7.Compativly slow
+            8.No security compare to IPv6
+     IPv6:--
+            1.IPv6 type addresses do not include any class type.
+            2.IPv6 is composed of 128-bit address length and is the latest updated version of the Internet Protocol (IP).
+            3.IPv6 configuration depends according to the requirement of the system and supports manual, and auto-configuration.
+            4.IPv6 addressing consists of 320 undecillion addresses.
+            5.IPv6 provides proper encryption and authentication services for the address.
+            6.Anycasting
+            7.fast forwarding
+            8.IPsec
+
+15)  How do we ensure network security for a cloud-based infrastructure?
+1. Shared responsibility
+2. Software-defined access
+3. Network segmentation
+4. encryption
+5. test and execute
+
+16) What is load balancing and how does it work in a networking context?
+ans: suppose a millons of users are connected to the server trying to access the information,thus the traffice is very high. in such case case load balancer is used to equally distribute the traffic in all the resources.that maximizes speed and capacity utilization and ensures that no one server is overworked, which could degrade performance.
+  
+17  What is a VPN and how is it used in networking?
+ans: A virtual private network, or VPN, is an encrypted connection over the Internet from a device to a network. The encrypted connection helps ensure that sensitive data is safely transmitted.
+     It prevents unauthorized people from eavesdropping on the traffic and allows the user to conduct work remotely.  VPN technology is widely used in corporate environments.
+1. VPN also ensures security by providing an encrypted tunnel between client and VPN server.
+2. VPN is used to bypass many blocked sites.
+3. VPN facilitates Anonymous browsing by hiding your ip address.
+4. Also, most appropriate Search engine optimization(SEO) is done by analyzing the data from VPN providers which provide country-wise stats of browsing a particular product. This method of SEO is used widely my many internet marketing managers to form new strategies.
+
+    
+
+18  How do we ensure network performance and scalability in a distributed system?
+ans: For the performance in distributed system - Serving Multiple Requests Simultaneously, Reducing Per-Call Workload of Servers, Reply Caching of Idempotent Remote Procedures.
+     The two basic ways to achieve scalability, namely increasing system capacity, typically through replication, and performance optimization of system components.
+
+
+19  Explain the concept of latency and how it affects network performance?
+ans: Time it takes for a request to travel from the sender to the receiver and for the receiver to process that request. 
+      The less latency in  storage network, the faster it can act on requests. 
+      That means more data gets delivered in less time (or) applications run faster and servers can do their jobs with greater efficiency. 
+
+20  What tools and technologies do you use for network monitoring and management?
+ans:  The two most widely used monitoring protocols are SNMP and WMI. 
+      They provide Network Admins with thousands of monitors to assess the health of their networks and the devices on them.
+      1. Auvik 
+      2. Domotz
+      3.Datadog Network Performance Monitoring
+      4.Entuity
+      5. ManageEngine OpManager
+      6.PRTG Network Monitor
+21  How is the network architecture of the DevOps tools designed?
+ans: Infrastructure and how it's built and maintained
+    Deployment pipelines for each service
+    Testing and security verification
+    Monitoring and analysis of services
+    Developer tools
+    Operational runbooks and processes to respond to infrastructure needs
+    Security procedures and threat responses
+
+
+22  How are the different components of the DevOps tools interconnected?
+ans:DevOps architecture must include continuous planning, development, integration, deployment, operations, and learning. Continuous testing, security, and compliance must also have a constant presence.
+    All of these elements must be represented in a pipeline that uses automation, an integrated toolchain, and governance.
+
+
+23	What is the bandwidth and latency of the network connections between the DevOps tools components?
+ans:Bandwidth is the amount of data your connection can handle, whereas latency refers to delays that impact how quickly data gets to your devices.
+
+
+24	Are there any firewalls or security measures in place that could potentially interfere with the networking of the DevOps tools?
+ans:  The main function of a network security firewall is to allow the safest network traffic to the network and to do so, it filters the good and trusted traffic from the 
+      whole traffic and doesn’t allow the bad and untrusted traffic to travel through the network.
+
+
+25	How is network traffic between the DevOps tools monitored and managed?
+ans: Network traffic monitoring, popularly known as NetFlow monitoring, is the process of tracking network traffic and bandwidth by analyzing flows based on different technologies.
+     Network traffic monitoring tools provide visibility with stats on trends and peaks.
+     Network bandwidth monitoring involves tracking and analyzing the volume of data that flows through a network. It measures the actual bandwidth on a LAN or WAN and helps to identify potential bottlenecks and outages.
+     It is important to analyze the bandwidth metrics on a network at the device and interface level.
+
+
+26	How are network performance and availability of the DevOps tools measured and monitored?
+ans: Network and computer system performance and availability are monitored by infrastructure. Tools for monitoring infrastructure can offer real-time data on variables like CPU usage, disk space, memory, and network traffic.
+     These instruments can assist in locating resource problems before they result in failure or other issues.
+
+
+27	How are updates and patches applied to the network components of the DevOps tools?
+ans: Updates can prevent security issues and improve compatibility and program features. Software updates are necessary to keep computers, mobile devices and tablets running smoothly and they may lower security vulnerabilities.
+     A patch is a set of updates to a server or its supporting data designed to update, fix and improve, including fixing security vulnerabilities and other bugs. 
+
+29	How are backups and disaster recovery plans implemented for the network components of the DevOps tools?
+ans: In a well-defined DevOps process, backups should be an automated step within the CI/CD pipeline. 
+     All major cloud platforms provide backup and restore capabilities for the products and services available on their platform, either through automatic backups, on-demand backups or both.
+     Yet backup integration with the DevOps process continues to evolve.
+
+30	What measures are in place to prevent network outages or disruptions in the event of high traffic or peak loads?
+ans: (1)Switch to Cloud Services
+     (2)Use a Redundant Network Connection
+     (3)Invest in High-quality Network Infrastructure
+     (4)Audit System for Potential Weaknesses or Threats
+
+31	What is NAT? How does it works?
+ans: Network Address Translation (NAT) is a service that is used in routers. 
+      Its purpose is to translate a set of IP addresses to another set of IP addresses.
+      Routers inside the private network can route traffic between private addresses with no trouble. 
+      However, to access resources outside the network, like the Internet, these computers have to have a public address in order for responses to their requests to return to them. 
+      This is where NAT comes into play.
+      A workstation inside a network makes a request to a computer on the Internet.
+      Routers within the network recognize that the request is not for a resource inside the network, so they send the request to the firewall. 
+      The firewall sees the request from the computer with the internal IP. 
+      It then makes the same request to the Internet using its own public address and returns the response from the Internet resource to the computer inside the private network. 
+      From the perspective of the resource on the Internet, it is sending information to the address of the firewall. From the perspective of the workstation, it appears that communication is directly with the site on the Internet. 
+
+32	Explain Default gateway
+ans: The major function of the default gateway is to pass the information to another router when the current packet does not know the destination.
+      It is a node or a router in the network that connects the host to remote network components.
+      Whenever a packet needs to be transmitted to another network, the packet must pass through the default gateway and the default gateway identifies the destination route and forwards the packet on that route.
+      It is considered as an exit point for the packets in the network.
+
+33	What is SSL tunneling? How does it works?
+ans: SSL Tunneling means a client that requires  SSL connection to a backend service or secure server via a proxy server.
+     This proxy server opens the connection between the client and the backend service and copies the data to both sides without any direct interference in the SSL connection.
+     Working - The client sends request secure connection to the internet on 443 for HTTPS.
+                The proxy server receives the request from the client and connects the secure destination server to the port .
+                The proxy server sends back a 200 OK response to the client to confirm that an SSL connection is created.
+                TLS handshake occurs effectively between the client and the server .
+                The encrypted data is passed from the client to the server via the proxy server and vice versa.
+                This data is only decrypted at the client or the server and never the proxy server.
+                When the closure of the connection is requested by the client or the server, the connections at ports 443 and 8080 are closed by the proxy server 
+
+
+34	What is network Congestion? What can cause it?
+ans: Network Congestion occurs when the traffic flowing through a network exceeds its maximum capacity. 
+     In most cases, congestion is a temporary issue with the network caused due to a sudden upsurge of traffic, however, sometimes, a network is continually congested, indicating a deeper problem.
+     It can cause,
+     (1) Over-subscription 
+     (2)Mulicasting
+     (3)Broadcast Storms
+     (4)Poor subnet management
+
+35	What private IP addresss? Explain with scenario?
+ans: Home, we can connect multiple devices ex:- mobiles, tablets and laptops etc. to the internet. 
+      We use a Router that provides private IP addresses to these devices.
+      Once  installed and configured Router with the public IP address provided by ISP then it will start assigning Private IP address to devices, if  connect it through Wi-Fi or cable to router and access internet.
+
+36	What public IP addresss? Explain with scenario?
+ans: A private IP address is the IP that is assigned to a device on a private TCP/IP Local Area Network. And these IP addresses are accessible only within the Local Area Network. 
+     Home network, internet connection from an ISP (Internet service provider). And ISP provides us an IP address that is public IP Address. This public IP Address is unique across the world as two computers cannot have same IP address.
+
+37	You need to connect two computers for file sharing. Is it possible to do this without using a hub or a router?
+ans: We can use --  python -m SimpleHTTPServer 8090 this commond on terminal from the folder which needs to be shared.
+
+38	When troubleshooting computer network problems, what common hardware-related problems can occur?
+ans: Problems related to hardware like, a faulty power cable or power supply unit. Sometimes RAM needs to be upgraded or VGA cable is not properly connected.
+     The wireless problems related to PaBX, LAN Card, WLAN Card and Wi-Fi AP and for wired Cables, Switches, Routers and Wireless Controllers.
+
+39	How do I use JSON to curl?
+ans: curl \
+     http://localhost:8080 \
+     --request POST \
+     --header "Content-Type: application/json" \
+     --data '[{"id": 001, "statuss": "complete"}, {"id": 002, "status": "pending"}]'
+
+
+40	How do you pass POST parameters in curl?
+ans: syntax is ----> 
+        curl -X POST -H "[content type]" -d "[post data]" [options] [URL]
+         -X: the parameter specifies which HTTP request method will be used when communicating with the server
+         -H: the content-type header indicates the data type in the request body
+         -d: the parameter specifies the data to be sent to the server in the POST message body
+
+41	What are proxy servers and how do they protect computer networks?
+ans: Proxy server is  dedicated computer or a software system running on a computer that acts as an intermediary between an endpoint device, such as a computer, and another server from which a user or client is requesting a service
+     proxy  server main funtion is to hide  users location on the web. When the user request a website, the proxy server acts as an intermediary between user and the website.
+     The clients IP adress is replaced with the server .Internet users who are attacked by the virus may utilize a proxy server.
+
+42	What is anonymous FTP?
+ans :  AFTP(anonymous file transfer protocol) is a network protocol used for transmitting files using TCP-based networks.
+       Anonymous file transfer protocol lets a user move files anonymously from one computer to another. 
+       Anonymous FTP permits anonymous external computer users without any designated password or user ID to access the FTP server
+
+43	Mention a few examples of private network addresses.
+ans: Private IP adress is used to communicate with in the private network.
+     (1)LoopBack adress - a special Ip adress that uses to communicate itself. The IPs 127.0.0.1 to 127.255.255.255 are reserved for LoopBack.
+     (2)Home Network - A private network in the home that connects devices such as computers, TVs , printer etc
+     (3)Local area network - A network for single geographical location such as an school ,office configured to communicate internally by private IP.
+     (4)Metropolitan Network - a network that connects muliple locations across a city.
+     (5)Data Centres - Organization commonly run bussiness software and backend from private network.
+     (6)Critcal Infrastructure - such as nuclear power facilites may not connect to the internet at all to minimize information security risks.  
+
+44	Explain NAT in networking.
+ans: Network Address Translation (NAT) is a process that enables one, unique IP address to represent an entire group of computers.
+     NATallows the single device to act as an intermediary or agent between the local, private network and the public network that is the internet.
+     NAT’s main purpose is to conserve the number of public IP addresses in use, for both security and economic goals.
+
+45	Which are the most typical functional units of the client/server applications?
+ans:  There are three funtional units:
+        (1)Presentaion Logic or user interface (example is ATM machines)
+        (2)Business Logic (Software that enables a customee to request an account balance)
+        (3)Data (ex: Account details of users)
+
+46	Mention any five applications that use TCP port.
+ans: (1)   HTTP(Hyper Text transfer protocol) port number is 80 - is a standard that is used to transfer web pages, formatted in HTML format. Web browsers such as Internet Explorer and Chrome download and render HTML pages.
+     (2)   FTP(File transfer Protocol) port number is 20, 21 -  is used to transfer files to and from a remote host, which acts as an FTP server
+     (3)   email- SMTP(Simple mail transfer Protocol) (outgoing message)Non-encrypted port number is 25 - It is standard to send emails over the Internet. This is used for mail delivery in either a spooled or queue fashion.
+     (4)   Session Initiation protocol (SIP)(Port no is 5060) is utilized to construct and deconstruct multimedia communication sessions. These sessions include voice and video conferencing, streaming, instant messaging, and online gaming
+     (5)   Real-Time Transport Protocol (RTP)(Port no is 1024 and above) is a packet-formatting standard for video and audio transmission over the Internet. 
+     (6)   POP3(Post Office Protocol) (Incoming message)Non-encrypted port number is 110 - is a protocol used to check for incoming mail. An email client connects to the POP3 server and downloads all messages that are addressed to that client.
+     (7)   Telnet port number is 23 - Telnet is a text-mode terminal emulation that gives a user remote access to a host. Since telnet transmits all data in cleartext without encryption, it’s not used anymore for remote management.
+     (8)   SSH port number is 22 -  is a telnet session setup over an SSL encrypted connection. This is utilized to log into other remote systems and check logs, perform troubleshooting, and more.
+
+47	"A receiving host has failed to receive all of the segments that it should acknowledge. 
+    What can the host do to improve the reliability of this communication session?"
+ans: A receiving host can control the transmitter by using flow control.
+     "By decreasing the window size" , the receiving host can slow down the transmitting host so the receiving host does not overflow its buffers.
+
+
+48	"Your router has the following IP address on Ethernet0: 172.16.2.1/23. 
+    Which of the following can be valid host IDs on the LAN interface attached to the router?
+    1. 172.16.1.100 2. 172.16.1.198 3. 172.16.2.255 4. 172.16.3.0"
+
+ans: The IP adress 172.16.2.1/23 in the LAN
+     The first adress is (FA) --> 172.16.2.0
+     The last adress(LA) is --> 172.16.3.255
+     So , Options 3) 172.16.2.255
+                  4) 172.16.3.0  , these two are correct answers.
+
+
+49	You need to subnet a network that has 5 subnets, each with at least 16 hosts. Which classful subnet mask would you use?
+ans: Here we cannot use 4 bits 2^4-(2)= 16-2=14  we cannot provide adress for network and broadcast adress.
+     So we use 5 bits that is 2^5-(2)=32-2=30 
+     So subnet mask we can use is 32-5 = 27,  /27 i.e, 255.255.255.224
+
+
+50	To test the IP stack on your local host, which IP address would you ping?
+ans:Ping the loopback interface of 127.0.0.1 .
+    This adress is reserved for loopback adress.
+
+51	What is the subnetwork address for a host with the IP address 200.10.5.68/28?
+ans: For the adress 200.10.5.68/28
+     The first adress is 200.10.5.64
+     The last adress is 200.10.5.127
+     So, The subnetwork adress is 200.10.5.64
+
+
+52	Which command would you place on interface connected to the Internet?
+ans: On the inside networks we  use the command "ip nat inside". On the outside interface, we use the command "ip nat outside".
+
+53	"When creating a pool of global addresses, which of the following can be used instead of the netmask command?
+    1. /(slash notation) 2.prefix length 3. No mask 4.block size"
+ans:  Option 2.) Prefix length can be used instead of netmask command.
+      Prefix length is another form of expressing subnet mask.
+
+54	"You want to create a standard access list that denies the subnet of the following host: 172.16.50.172/20. 
+    Which of the following would you start your list with?
+    A.access-list 10 deny 172.16.48.0 255.255.240.0 B. access-list 10 deny 172.16.0.0 0.0.255.255 C. access-list 10 deny 172.16.64.0 0.0.31.255 D. access-list 10 deny 172.16.48.0 0.0.15.255"
+ans:  option D.)  access-list 10 deny 172.16.48.0 0.0.15.255
+
+55	"A network administrator views the output from the show ip route command. A network that is advertised by both RIP and IGRP appears in the 
+    routing table flagged as an IGRP route. Why is the RIP route to this network not used in the routing table?"
+ans: IGRP has lower administrative distance (100) and RIP  has higher administrative distance (120)
+
+
+
+
+
